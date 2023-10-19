@@ -1,0 +1,31 @@
+.about-container{
+    font-size:20px;
+    text-align:center;
+    margin:3% auto;
+    padding:4%;
+}
+
+.about-container h1{
+    font-size:55px;
+}
+
+.about-container p{
+    margin-top:5%;
+    font-weight:bolder;
+}
+
+.about-container .home-link{
+    width:100%;
+    text-align:center;
+    padding:1%;
+    display:inline-block;
+    font-size:25px;
+    font-weight:bolder;
+    text-decoration:underline;
+    color:black;
+    margin-top:15%;
+}
+
+.about-container .home-link:hover{
+    text-decoration:none;
+}

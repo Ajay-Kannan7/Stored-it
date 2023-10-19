@@ -1,0 +1,12 @@
+.login-header{
+    font-size:20px;
+    text-align:center;
+    margin:15% auto;
+}
+
+@media only screen and (max-width:1000px){
+    .login-header{
+        margin:45% auto;
+        font-size:25px;
+    }
+}

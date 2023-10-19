@@ -1,0 +1,23 @@
+.main-banner{
+    padding-top:15%;
+}
+
+.main-banner .main-header{
+    font-size:45px;
+    text-align:center;
+}
+
+.home-link{
+    width:100%;
+    text-align:center;
+    padding:1%;
+    display:inline-block;
+    font-size:25px;
+    font-weight:bolder;
+    text-decoration:underline;
+    color:black;
+} 
+
+.home-link:hover{
+    text-decoration:none;
+}

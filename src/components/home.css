@@ -1,0 +1,114 @@
+.main-container .banner-cover{
+    width:90%;
+    background-color:black;
+    color:white;
+    margin:0 auto;
+    padding:5%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.main-container .banner-cover .banner{
+    margin-right:7%;
+}
+.main-container .banner-cover h1{
+    font-size:50px;
+}
+.main-container .banner-cover h3{
+    font-size:70px;
+}
+.main-container .banner-icon .icon{
+    transform:rotate(-20deg);
+    font-size:90px;
+}
+.main-container .card-container{
+    padding:4%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+}
+
+.card-container .cards{
+    width:30%;
+    padding:2%;
+    border:4px solid black;
+    border-radius:20px;
+    margin-bottom:2%;
+}
+
+.card-container .cards img{
+    width:100%;
+    height:60%;
+    border-radius:20px;
+}
+
+.card-container .cards .cards-header{
+    width:100%;
+    font-size:20px;
+    padding-top:2%;
+}
+
+.card-container .cards .cards-header .card-link{
+    text-decoration:none;
+    font-weight:bolder;
+    color:black;
+    display:inline-block;
+    transition:opacity 0.2s ease-in;
+}
+
+.card-container .cards .cards-header .card-link:hover{
+    opacity:0.5;
+}
+
+.card-container .cards .cards-header p{
+    font-size:17px;
+    font-weight:bolder;
+}
+
+.card-container .cards .cards-category{
+    font-size:14px;
+    font-weight:bolder;
+    margin-top:2%;
+}
+
+.card-container .cards .cards-button{
+    font-size:18px;
+    margin-top:7%;
+    cursor:pointer;
+    padding:2%;
+    border:3px solid black;
+    border-radius:10px;
+}
+
+.card-container .cards .cards-button .link{
+    text-decoration:none;
+    color:black;
+    font-weight:bolder;
+    display:inline-block;
+    transition:opacity 0.3s ease-in;
+}
+
+.card-container .cards .cards-button .link:hover{
+    opacity:0.5;
+}
+
+@media only screen and (max-width:1000px){
+    .main-container .card-container{
+        flex-direction:column;
+    }
+
+    .card-container .cards{
+        width:100%;
+        padding:7%;
+    }
+
+    .main-container .banner-cover .banner h1{
+        font-size:30px;
+    }
+
+    .main-container .banner-cover .banner h3{
+        font-size:40px;
+    }
+}
