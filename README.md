@@ -91,4 +91,4 @@ of keeping the cart items visible for when a user adds a product to the cart.
    Back-end: Render
    
    ## Live URL
-   https://store-it.netlify.app/ 
+   https://stored-it.netlify.app/ 
