@@ -8,6 +8,7 @@ function HomePage(props){
     let [iconValue,handleIcon]=useState({
         initialValue:faBars
     })
+    // Data load up
     let data;
     if(props.data===null){
         return
@@ -32,19 +33,14 @@ function HomePage(props){
     })
   }
     //cart data tracker
-    let cartElements=0;
     let cartNumber=0;
-    // let cartSize=state.cartData.length;
-    // console.log(cartSize)
-    // let cartLocalStorage=localStorage.setItem("cart-size",JSON.stringify(cartSize))
     let cartItemsPresent=localStorage.getItem("cart-filled");
     console.log(cartItemsPresent)
-    if(cartItemsPresent>0){
+    if(cartItemsPresent){
       let cartProductData=JSON.parse(localStorage.getItem("cart-products"))
       console.log(cartProductData)
       if(cartProductData.length>0){
         for(let i=0;i<cartProductData.length;i++){
-          cartElements+=cartProductData[i].rate
           cartNumber+=parseInt(cartProductData[i].quantity)
         }
       }
@@ -70,7 +66,7 @@ function HomePage(props){
             <div className="banner-cover">
               <div className="banner">
                 <h1>Store-It,</h1>
-                <h3>An online store!</h3>
+                <h3>Your online store!</h3>
               </div>
               <div className="banner-icon">
                 <FontAwesomeIcon className="icon" icon={faShoppingCart}></FontAwesomeIcon>

@@ -35,6 +35,12 @@
     border:2px solid black;
     margin-top:2%;
     cursor:pointer;
+    transition:color 0.2s ease-in;
+}
+
+.login .login-page button:hover{
+    background-color:black;
+    color:white;
 }
 
 @media only screen and (max-width:1000px){

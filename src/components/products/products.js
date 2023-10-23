@@ -10,7 +10,7 @@ function ProductPage(props){
 
     let {id}=useParams();
 
-    //redux state mnagement
+    //redux state management
     let state=useSelector(state=>{
         return {...state}
     })

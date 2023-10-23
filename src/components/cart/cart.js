@@ -36,21 +36,21 @@ function CartPage(props){
     return(
         <div className="main-container">
             <h1 className="main-header">Your Cart</h1>
-            {state.cartData.length>0 || cartItemsPresent>0?
+            {state.cartData.length>0 || cartItemsPresent?
             <div className="products-container-main">
                 <div className="product-container">
                     <div className="prods-container">
                         {cartProductData.map(items=>(
                         <div className="cart-products">
                             <h1>Product: {items.header}</h1>
-                            <p>Price: {items.rate}</p>
+                            <p>Total Price: {items.rate}</p>
                             <p>Quantity: {items.quantity}</p>
                             {/* <button onClick={removeProduct}>Remove</button> */}
                         </div>
                         ))}
                     </div> 
                     <div className="checkout">
-                        <p>Total Price: $ {props.totalPrice}</p>
+                        <p>Grand Total: $ {props.totalPrice}</p>
                         <button className="clear-cart" onClick={handleCheckout}>Checkout</button>
                     </div>
                 </div>

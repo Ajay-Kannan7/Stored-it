@@ -35,7 +35,13 @@
     font-size:25px;
     border:2px solid black;
     margin-top:2%;
-    cursor:pointer;
+    cursor:pointer;    
+    transition:color 0.2s ease-in;
+}
+
+.register .register-page button:hover{
+    background-color:black;
+    color:white;
 }
 
 ::placeholder{

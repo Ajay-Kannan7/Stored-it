@@ -1,5 +1,4 @@
-
-import { BrowserRouter,Routes,Route,useNavigate} from 'react-router-dom';
+import { BrowserRouter,Routes,Route} from 'react-router-dom';
 import { useEffect } from 'react';
 import { useSelector,useDispatch } from 'react-redux';
 import HomePage from './components/home.js';
@@ -12,8 +11,6 @@ import CheckoutSuccess from './components/checkout-success/checkout-success.js';
 import "./app.css";
 import axios from 'axios';
 function App() {
-
-
   //redux state management
   let state=useSelector((state)=>{
     return{
@@ -21,7 +18,7 @@ function App() {
     }
   })
   let dispatch=useDispatch()
-
+  // Initial data load
   useEffect(()=>{ 
     axios.get("https://node-e-commerce.onrender.com/")
     .then(res=>{
@@ -36,32 +33,21 @@ function App() {
   },[])
     //cart data tracker
     let cartElements=0;
-    let cartNumber=0;
-    // let cartSize=state.cartData.length;
-    // console.log(cartSize)
-    // let cartLocalStorage=localStorage.setItem("cart-size",JSON.stringify(cartSize))
     let cartItemsPresent=localStorage.getItem("cart-filled");
     console.log(cartItemsPresent)
-    if(cartItemsPresent>0){
+    if(cartItemsPresent){
       let cartProductData=JSON.parse(localStorage.getItem("cart-products"))
       console.log(cartProductData)
       if(cartProductData.length>0){
         for(let i=0;i<cartProductData.length;i++){
           cartElements+=cartProductData[i].rate
-          cartNumber+=parseInt(cartProductData[i].quantity)
         }
       }
-      else{
-          cartNumber=0;
-      }
     }
-  
-    // localStorage.clear();
     let isLoggedIn=window.localStorage.getItem("isLoggedIn")
   return (
     <div className="App">
       <BrowserRouter>
-      
         <Routes>
           <Route path="/" element={isLoggedIn? <HomePage data={state.homeData}/> : <LoginPage />}></Route>
           <Route path="/about" element={<AboutPage />}></Route>
